@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    margin: 0;
+    font-size: 1.1rem;
+
+}
+
+.wrapper{
+    background: #82F8BF;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.calculator{
+    background: linear-gradient(270deg, rgba(8, 130, 230, 0.2), rgba(14, 231, 123, 0.2)); 
+backdrop-filter: blur(8.5px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 16px;
+width: 350px;
+height: 450px;
+padding: 2rem 1.5rem;
+z-index: 10;
+
+
+/* grid  */
+
+display: grid;
+gap: 5px;
+
+grid-template-areas: 
+"display display display display"
+"ac c perc divide"
+"btn7 btn8 btn9 multi"
+"btn4 btn5 btn6 plus"
+"btn1 btn2 btn3 sub"
+"btn0 btn0 dot equals";
+    
+}
+
+.calculator div{
+    background: grey;
+    /* width: 50px; */
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: -10px 10px 6px rgba(0, 0, 0, 0.112);
+}
+
+.display{
+    grid-area: display;
+
+}
+.btn-ac{
+    grid-area: ac;
+}
+.btn-c{
+    grid-area: c;
+}
+.btn-perc{
+    grid-area: perc;
+}
+.btn-divide{
+    grid-area: divide;
+}
+.btn-7{
+    grid-area: btn7;
+}
+.btn-8{
+    grid-area: btn8;
+}
+.btn-9{
+    grid-area: btn9;
+}
+.btn-multi{
+    grid-area: multi;
+}
+.btn-4{
+    grid-area: btn4;
+}
+.btn-5{
+    grid-area: btn5;
+}
+.btn-6{
+    grid-area: btn6;
+}
+.btn-plus{
+    grid-area: plus;
+}
+.btn-1{
+    grid-area: btn1;
+}
+.btn-2{
+    grid-area: btn2;
+}
+.btn-3{
+    grid-area: btn3;
+}
+.btn-sub{
+    grid-area: sub;
+}
+.btn-0{
+    grid-area: btn0;
+}
+.btn-dot{
+    grid-area: dot;
+}
+.btn-equals{
+    grid-area: equals;
+}
+
+.calculator > .display{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+    font-family: 'Orbitron', sans-serif;
+
+    background: white;
+    border-radius: 5px;
+}
+
+.ball{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to right, red, rgb(231, 15, 15));
+
+    position: relative;
+    right: 410px;
+    top: 220px;
+
+   
+
+}
