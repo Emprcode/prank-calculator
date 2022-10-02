@@ -39,9 +39,19 @@ let strToDisplay = "";
 
 const operators = ["%", "/", "*", "-", "+"];
 
+let lastOperator  = ""
+
+const audio = new Audio("abc.wav")
+
 allButtons.map((btn, i)=>{
     btn.addEventListener("click", () => {
         const val = btn.innerText;
+
+        
+            displayElm.style.background = "";
+            displayElm.style.color = "black";
+            displayElm.classList.remove("prank");
+       
 
         if(val === "AC"){
             strToDisplay= ''
@@ -66,6 +76,8 @@ allButtons.map((btn, i)=>{
         }
 
         if(operators.includes(val)){
+            lastOperator = val;
+
             if(!strToDisplay){
                 return;
             };
@@ -76,6 +88,20 @@ allButtons.map((btn, i)=>{
             }
         }
         
+        if ( val === "."){
+
+            if(lastOperator){
+                const operatorIndex = strToDisplay.lastIndexOf(lastOperator);
+                const lastNumberSet = strToDisplay.slice(operatorIndex + 1);
+                if (lastNumberSet.includes(".")){
+                    return;
+                }
+            }
+
+            if(!lastOperator && strToDisplay.includes(".")){
+                return;
+            }
+        }
 
 
 
@@ -93,10 +119,25 @@ const display = (str) => {
 }
 
 const total = ( )=>{
-    const ttl = eval(strToDisplay)
+ const extra = randomNumber();
+//  console.log(extra);
+
+if(extra > 0){
+    displayElm.style.background = "red";
+    displayElm.style.color = "white";
+    displayElm.classList.add("prank");
+    audio.play()
+}
+
+    const ttl = eval(strToDisplay) + extra;
     strToDisplay = ttl.toString();
 
     display(strToDisplay);
 
+};
+
+
+const randomNumber = () => {
+    const num = Math.round(Math.random() *10);
+    return num < 5 ? num : 0;
 }
- 
