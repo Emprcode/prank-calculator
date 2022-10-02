@@ -1,3 +1,5 @@
+
+
 // grab all the buttons as in array
 //loop through them and click add event listner to each element
 //when elements are clicked, get the buttons innner text to 
@@ -141,3 +143,15 @@ const randomNumber = () => {
     const num = Math.round(Math.random() *10);
     return num < 5 ? num : 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
