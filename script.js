@@ -145,7 +145,7 @@ const randomNumber = () => {
     return num < 5 ? num : 0;
 }
 
-The above code is all about the prank calculator that will give some wrong result and some animations are added to display those results are wrong
+// The above code is all about the prank calculator that will give some wrong result and some animations are added to display those results are wrong
 
 
 
