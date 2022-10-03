@@ -21,6 +21,7 @@
 //     elm.addEventListener('click', () =>{
 //         const val = elm.innerText;
 
+
 //         strToDisplay += val;
 //         display(strToDisplay);
 //     });
@@ -143,6 +144,8 @@ const randomNumber = () => {
     const num = Math.round(Math.random() *10);
     return num < 5 ? num : 0;
 }
+
+The above code is all about the prank calculator that will give some wrong result and some animations are added to display those results are wrong
 
 
 
