@@ -2,7 +2,8 @@
 
 // grab all the buttons as in array
 //loop through them and click add event listner to each element
-//when elements are clicked, get the buttons innner text to 
+//when elements are clicked
+// , get the buttons innner text to 
 
 // const buttonClick = (val) => {
 //     alert(val);
