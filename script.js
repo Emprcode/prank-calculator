@@ -137,9 +137,10 @@ if(extra > 0){
     strToDisplay = ttl.toString();
 
     display(strToDisplay);
+    
 
 };
-
+console.log(typeof strToDisplay);
 
 const randomNumber = () => {
     const num = Math.round(Math.random() *10);
