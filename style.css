@@ -150,6 +150,7 @@ grid-template-areas:
 }
 
 .prank{
+    
     animation: shake 0.5s;
 }
 @keyframes shake {
@@ -167,3 +168,4 @@ grid-template-areas:
     }
     
 }
+

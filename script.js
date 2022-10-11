@@ -122,7 +122,7 @@ const display = (str) => {
 
 }
 
-const total = ( )=>{
+const total = ()=>{
  const extra = randomNumber();
 //  console.log(extra);
 
